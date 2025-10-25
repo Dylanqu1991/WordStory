@@ -1,9 +1,10 @@
 
 
+
 import React, { useState, useEffect, useMemo } from 'react';
 import type { Story, StorySeries, VocabularyLibrary, WordDetails, User, ActivationCode } from './types';
 import { fetchMultipleWordDetailsFromApi } from './services/translationService';
-import { LeanCloudService } from './services/leanCloudService';
+import { LeanCloudService, initializeLeanCloud } from './services/leanCloudService';
 
 import Auth from './components/Auth';
 import LibrarySelection from './components/LibrarySelection';
@@ -342,6 +343,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const initializeApp = async () => {
       try {
+        initializeLeanCloud();
         await leanCloudService.verifyConnection();
         leanCloudService.getSoundUrls().then(setSoundUrls);
         const user = leanCloudService.getCurrentUser();

@@ -2,10 +2,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { initializeLeanCloud } from './services/leanCloudService';
-
-// Explicitly initialize the LeanCloud SDK at the app's entry point.
-initializeLeanCloud();
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
