@@ -1,0 +1,5 @@
+{
+  "name": "看故事背单词-在线02版",
+  "description": "An interactive web application to learn English words through stories. Users can add stories with mixed English and Chinese, click on English words to see their definitions, hear pronunciations, and view example sentences fetched from a translation service.",
+  "requestFramePermissions": []
+}
